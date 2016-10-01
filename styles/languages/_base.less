@@ -1,0 +1,99 @@
+
+.comment {
+  color: @comment;
+  font-style: italic;
+}
+
+.string {
+  &.quoted {
+    color: @string;
+  }
+  &.regexp {
+    color: @red;
+  }
+}
+
+.constant {
+  &.numeric {
+    color: @number;
+  }
+  &.language {
+    color: @constant;
+  }
+  &.character,
+  &.other {
+    color: @orange;
+  }
+}
+
+.variable {
+  color: @variable;
+}
+
+.keyword {
+  color: @keyword;
+}
+
+.storage {
+  color: @storage;
+}
+
+.entity {
+  &.name {
+    &.class {
+        color: @class;
+    }
+    &.type {
+        color: @sky;
+    }
+    &.function {
+      color: @function;
+    }
+  }
+  &.other.attribute-name {
+    color: @attribute;
+  }
+}
+
+.support {
+  &.function {
+    color: @function;
+    &.builtin {
+      color: @green;
+    }
+  }
+  &.type {
+      color: @sky;
+  }
+  &.class {
+    color: @class;
+  }
+}
+
+.tag {
+  &.entity.name {
+    color: @tag;
+  }
+  &.punctuation.definition {
+    &.html,
+    &.begin,
+    &.end {
+      color: @comment;
+    }
+  }
+}
+
+.invalid {
+  &.deprecated {
+    color: @yellow;
+    text-decoration: underline;
+  }
+  &.illegal {
+    color: @red;
+    text-decoration: underline;
+  }
+}
+
+.none {
+  color: @foreground;
+}

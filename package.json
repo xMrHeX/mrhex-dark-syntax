@@ -1,0 +1,11 @@
+{
+  "name": "mrhex-dark-syntax",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "description": "A dark syntax theme using mrhex colors",
+  "repository": "https://github.com/xMrHeX/mrhex-dark-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
