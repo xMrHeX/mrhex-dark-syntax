@@ -2,8 +2,6 @@
 
 Atom theme using the ever popular dark [MrHeX]() colors.
 
-<img alt="screenshot" src="" srcset=" 2x">
-
 I like dark windows and lots of bright colored text that pops out at you.
 Best with [MrHeX Dark UI](https://github.com/xMrHeX/mrhex-dark-ui)
 
