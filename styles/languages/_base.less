@@ -1,7 +1,6 @@
 
 .comment {
   color: @comment;
-  font-style: italic;
 }
 
 .string {
@@ -59,7 +58,7 @@
   &.function {
     color: @function;
     &.builtin {
-      color: @green;
+      color: @keyword-other;
     }
   }
   &.type {
@@ -82,7 +81,30 @@
     }
   }
 }
-
+meta.punctuation.section.dictionary {
+  color: @braces;
+}
+.punctuation.separator {
+  color: @colon;
+}
+.punctuation.separator.namespace {
+    color: @colon
+}
+.punctuation.section.function {
+  color: @parenthesis;
+}
+.punctuation.section.dictionary {
+  color: @braces;
+}
+.punctuation.section.array {
+  color: @brackets;
+}
+.punctuation.definition.array {
+  color: @brackets;
+}
+.punctuation.definition.string {
+    color: @string;
+}
 .invalid {
   &.deprecated {
     color: @yellow;
