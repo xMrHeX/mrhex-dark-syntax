@@ -1,0 +1,49 @@
+.source.json {
+
+.meta.structure.dictionary.json{
+      color: @attribute;
+
+      & > .string.quoted.json {
+        color: @property;
+      }
+
+      & > .value.json > .string.json  {
+        color: @string;
+      }
+
+      & > .value.json > .array.json > .string.json  {
+        color: @string;
+      }
+ }
+
+ .punctuation.definition.dictionary.json {
+     &.begin,
+     &.end {
+         color: @braces;
+      }
+ }
+
+ .punctuation.definition.array.json {
+     &.begin,
+     &.end {
+         color: @purple;
+         font-weight: bold
+     }
+ }
+
+ .punctuation.separator.dictionary.key-value.json {
+     color: @green;
+     font-weight: bold;
+ }
+
+ .punctuation.separator.dictionary.pair.json {
+     color: @comma;
+     font-weight: bold;
+ }
+
+ .punctuation.separator.array.json {
+     color: @comma;
+     font-weight: bold;
+ }
+
+}
