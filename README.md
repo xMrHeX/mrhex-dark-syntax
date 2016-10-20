@@ -4,6 +4,9 @@ Atom theme using the ever popular dark [MrHeX]() colors.
 
 <img alt="screenshot" src="" srcset=" 2x">
 
+I like dark windows and lots of bright colored text that pops out at you.
+Best with [MrHeX Dark UI](https://github.com/xMrHeX/mrhex-dark-ui)
+
 I used Atom Dark as a template and went from there.
 I added json syntax support with help from smockle/colorful-json. Thanks!
 This theme can be activated by going to the _Themes_ section
