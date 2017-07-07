@@ -3,9 +3,15 @@
   "theme": "syntax",
   "version": "1.0.0",
   "description": "A dark syntax theme using mrhex colors",
+  "keywords": [
+    "syntax",
+    "theme",
+    "dark",
+    "mrhex"
+  ],
   "repository": "https://github.com/xMrHeX/mrhex-dark-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=1.13.0 <2.0.0"
   }
 }

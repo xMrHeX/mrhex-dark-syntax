@@ -1,121 +1,161 @@
 
-.comment {
+.syntax--comment {
   color: @comment;
 }
 
-.string {
-  &.quoted {
+.syntax--string {
+  &.syntax--quoted {
     color: @string;
   }
-  &.regexp {
+  &.syntax--regexp {
     color: @red;
   }
 }
 
-.constant {
-  &.numeric {
+.syntax--constant {
+  &.syntax--numeric {
     color: @number;
+    &.syntax--integer,
+    &.syntax--decimal{
+        color: @number;
+    }
   }
-  &.language {
+  &.syntax--language {
     color: @constant;
   }
-  &.character,
-  &.other {
-    color: @orange;
+  &.syntax--character,
+  &.syntax--other {
+    color: @constant;
+    &.syntax--placeholder {
+      color: @constant;
+    }
   }
 }
 
-.variable {
+.syntax--variable {
   color: @variable;
 }
 
-.keyword {
+.syntax--keyword {
   color: @keyword;
+  &.syntax-operator {
+    color: @operator;
+    &.syntax--assignment {
+      color: @assignment;
+    }
+    &.syntax--comparison {
+      color: @comparison;
+    }
+    &.syntax--logical {
+      color: @logical;
+    }
+  }
 }
 
-.storage {
+.syntax--storage {
   color: @storage;
+  &.syntax--type,
+  &.syntax--function {
+      color: @function;
+  }
 }
 
-.entity {
-  &.name {
-    &.class {
+.syntax--entity {
+  &.syntax--name {
+    &.syntax--class {
         color: @class;
     }
-    &.type {
+    &.syntax--type {
         color: @sky;
     }
-    &.function {
+    &.syntax--function {
       color: @function;
     }
   }
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: @attribute;
   }
 }
 
-.support {
-  &.function {
+.syntax--syntax--support {
+  &.syntax--function {
     color: @function;
-    &.builtin {
+    &.syntax--builtin {
       color: @keyword-other;
     }
   }
-  &.type {
+  &.syntax--type {
       color: @sky;
   }
-  &.class {
+  &.syntax--class {
     color: @class;
   }
 }
 
-.tag {
-  &.entity.name {
+.syntax--syntax--tag {
+  &.syntax--entity.syntax--name {
     color: @tag;
   }
-  &.punctuation.definition {
-    &.html,
-    &.begin,
-    &.end {
+  &.syntax--punctuation.syntax--definition {
+    &.syntax--html,
+    &.syntax--begin,
+    &.syntax--end {
       color: @comment;
     }
   }
 }
-meta.punctuation.section.dictionary {
+
+.syntax--meta {
+    &.syntax--function {
+        color: @function;
+    }
+    &.syntax--function-call {
+        color: @function-call;
+    }
+    &.syntax--item-access {
+        color: @item;
+    }
+}
+
+meta.syntax--punctuation.syntax--section.syntax--dictionary {
   color: @braces;
 }
-.punctuation.separator {
+.syntax--punctuation.syntax--separator {
   color: @colon;
 }
-.punctuation.separator.namespace {
-    color: @colon
+.syntax--punctuation.syntax--separator.syntax--namespace {
+    color: @colon;
 }
-.punctuation.section.function {
+.syntax--punctuation.syntax--section.syntax--function {
   color: @parenthesis;
 }
-.punctuation.section.dictionary {
+.syntax--punctuation.syntax--section.syntax--dictionary {
   color: @braces;
 }
-.punctuation.section.array {
+.syntax--punctuation.syntax--section.syntax--array {
   color: @brackets;
 }
-.punctuation.definition.array {
+.syntax--punctuation.syntax--definition.syntax--array {
   color: @brackets;
 }
-.punctuation.definition.string {
+.syntax--punctuation.syntax--definition.syntax--arguments {
+  color: @brackets;
+}
+.syntax--punctuation.syntax--definition.syntax--string {
     color: @string;
 }
-.invalid {
-  &.deprecated {
+
+.syntax--invalid {
+  &.syntax--deprecated {
     color: @yellow;
     text-decoration: underline;
   }
-  &.illegal {
+  &.syntax--illegal {
     color: @red;
     text-decoration: underline;
   }
 }
 
-.none {
+.syntax--none {
   color: @foreground;
 }

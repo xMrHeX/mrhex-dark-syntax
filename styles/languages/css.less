@@ -1,55 +1,55 @@
-.source.css {
+.syntax--source.syntax--css {
 
-  .punctuation {
-    &.separator {
+  .syntax--punctuation {
+    &.syntax--separator {
         color: @green;
     }
-    &.terminator {
+    &.syntax--terminator {
       color: @red;
     }
-    &.property-list.begin,
-    &.property-list.end {
+    &.syntax--property-list.syntax--begin,
+    &.syntax--property-list.syntax--end {
       color: @yellow;
     }
-    &.section.function {
+    &.syntax--section.syntax--function {
       color: @yellow;
     }
   }
 
-  .entity.name {
+  .syntax--entity.syntax--name {
     color: @green;
   }
-  .attribute-name.class {
+  .syntax--attribute-name.syntax--class {
       color: @orange;
   }
-  .id {
+  .syntax--id {
     color: @violet;
   }
-  .pseudo-element,
-  .pseudo-class {
+  .syntax--pseudo-element,
+  .syntax--pseudo-class {
     color: @orange;
   }
 
-  .property-value {
+  .syntax--property-value {
     color: @string;
   }
-  .constant.numeric {
+  .syntax--constant.syntax--numeric {
     color: @number;
-    .unit {
+    .syntax--unit {
       color: @number;
     }
   }
-  .rgb-value {
+  .syntax--rgb-value {
     color: @cyan;
   }
-  .support.constant {
+  .syntax--support.syntax--constant {
     color: @orange;
-    &.media {
+    &.syntax--media {
       color: @red;
     }
   }
 
-  .keyword.important {
+  .syntax--keyword.syntax--important {
     color: @red;
   }
 
@@ -59,9 +59,25 @@
 // Less/Sass should have their own files,
 // but for just a single override, here should be fine too
 
-.source.less,
-.source.scss {
-  .keyword.unit {
+.syntax--source.syntax--less {
+  //   .leading-whitespace {
+  //   color: rgba(0,0,0,0);
+  //   position: relative;
+  //   box-shadow: inset 1px 0 0 rgba(255,255,255,0.1); // It force the shadow to have a different color than the text.
+  // }
+  // .leading-whitespace:after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   border-bottom: 1px solid rgba(255,255,255,0.1);
+  // }
+}
+.syntax--source.syntax--scss {
+  .syntax--keyword.syntax--unit {
     color: @keyword;
   }
 }

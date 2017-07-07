@@ -1,49 +1,65 @@
-.source.json {
+.syntax--source.syntax--json {
 
-.meta.structure.dictionary.json{
+.syntax--meta.syntax--structure.syntax--dictionary.syntax--json{
       color: @attribute;
 
-      & > .string.quoted.json {
+      & > .syntax--string.syntax--quoted.syntax--json {
         color: @property;
       }
 
-      & > .value.json > .string.json  {
+      & > .syntax--value.syntax--json > .syntax--string.syntax--json  {
         color: @string;
       }
 
-      & > .value.json > .array.json > .string.json  {
+      & > .syntax--value.syntax--json > .syntax--array.syntax--json > .syntax--string.syntax--json  {
         color: @string;
       }
  }
 
- .punctuation.definition.dictionary.json {
-     &.begin,
-     &.end {
+ .syntax--punctuation.syntax--definition.syntax--dictionary.syntax--json {
+     &.syntax--begin,
+     &.syntax--end {
          color: @braces;
       }
  }
 
- .punctuation.definition.array.json {
-     &.begin,
-     &.end {
+ .syntax--punctuation.syntax--definition.syntax--array.syntax--json {
+     &.syntax--begin,
+     &.syntax--end {
          color: @purple;
-         font-weight: bold
+         font-weight: bold;
      }
  }
 
- .punctuation.separator.dictionary.key-value.json {
+ .syntax--punctuation.syntax--separator.syntax--dictionary.syntax--key-value.syntax--json {
      color: @green;
      font-weight: bold;
  }
 
- .punctuation.separator.dictionary.pair.json {
+ .syntax--punctuation.syntax--separator.syntax--dictionary.syntax--pair.syntax--json {
      color: @comma;
      font-weight: bold;
  }
 
- .punctuation.separator.array.json {
+ .syntax--punctuation.syntax--separator.syntax--array.syntax--json {
      color: @comma;
      font-weight: bold;
  }
+
+//  .syntax--leading-whitespace {
+//  color: rgba(0,0,0,0);
+//  position: relative;
+//  box-shadow: inset 1px 0 0 rgba(255,255,255,0.1); // It force the shadow to have a different color than the text.
+// }
+// .syntax--leading-whitespace:after {
+//  content: '';
+//  display: block;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  border-bottom: 1px solid rgba(255,255,255,0.1);
+// }
 
 }
