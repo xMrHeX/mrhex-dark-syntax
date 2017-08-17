@@ -1,4 +1,4 @@
-.syntax--source.syntax--c {
+.syntax--source.syntax--cpp {
   .syntax--meta.syntax--preprocessor {
     color: @red;
   }
@@ -14,55 +14,30 @@
     &.syntax--numeric, &.syntax--language.syntax--c {
       color: @cyan;
     }
-
-    &.syntax--other.syntax--placeholder {
-            color: @sky;
-        }
-    }
-
-  .syntax--keyword.syntax--control.syntax--directive.syntax--define {
-        color: @blue;
-    }
-
-  .syntax--storage {
-    &.syntax--type {
-      color: @blue;
-    }
   }
-
+  .syntax--storage {
+    color: @yellow;
+  }
   .syntax--entity {
     color: @cnst;
+
     &.syntax--name.syntax--function.syntax--preprocessor {
-      color: @brownish;
+      color: @red;
     }
   }
-
-  .syntax--support {
-    &.syntax--type {
-      color: @blue;
-    }
-
-    &.syntax--type.syntax--sys-types {
-      color: @purple;
-    }
+  .syntax--support.syntax--type {
+    color: @yellow;
 
     &.syntax--posix-reserved {
       color: @cnst;
     }
   }
-
   .syntax--variable {
-    &.syntax--other {
-      &.syntax--dot-access {
+    &.syntax--other.syntax--dot-access {
       color: @variable;
     }
-    &.syntax--dot-access {
-    color: @yellow;
-  }
-  }
     &.syntax--parameter.syntax--preprocessor {
       color: @red;
     }
   }
-
 }
