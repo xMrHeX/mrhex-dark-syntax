@@ -1,20 +1,23 @@
 .syntax--source.syntax--yaml {
 
     .syntax--constant.syntax--numeric {
-        color: @magenta;
+        color: @number;
+    }
+
+    .syntax--string.syntax--unquoted {
+        color: @variable;
     }
 
     .syntax--entity.syntax--name.syntax--tag {
-        color: @magenta;
+        color: @tag;
     }
 
-}
+    .syntax--punctuation.syntax--separator.syntax--key-value {
+      color: @punctuation
+    }
 
+    .syntax--punctuation.syntax--definition.syntax--entry {
+      color: @green
+    }
 
-.syntax--constant.syntax--numeric.syntax--yaml {
-    color: @magenta;
-}
-
-.syntax--entity.syntax--name.syntax--tag.syntax--yaml {
-    color: @purple;
 }
