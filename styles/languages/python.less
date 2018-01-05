@@ -1,98 +1,120 @@
-.source.python {
-  .entity {
+.syntax--source.syntax--python {
+  .syntax--entity {
     color: @turquois;
-
-    &.name {
+    &.syntax--name {
       color: @blue;
     }
-    &.other {
-      color: @blue;
-    }
-  }
-
-  .function {
-    color: @function;
-
-    &.magic {
+    &.syntax--other {
       color: @blue;
     }
   }
 
-  .punctuation.string {
+  .syntax--storage {
+    color: @storage;
+    &.syntax--type,
+    &.syntax--function {
+      color: @function;
+      &.syntax--magic {
+        color: @blue;
+      }
+    }
+    &.syntax--string {
+      color: @string;
+    }
+    &.syntax--class {
+      color: @class;
+      &.syntax--todo {
+        color: @magenta;
+      }
+    }
+  }
+
+  .syntax--string {
+    &.syntax--quoted {
+      &.syntax--double {
+        &.syntax--block {
+          color: @docstring;
+          &.syntax--sql {
+          color: @docstring;
+          }
+        }
+      }
+    }
+  }
+  .syntax--block {
+    color: @docstring;
+  }
+  .syntax--punctuation.syntax--string {
     color: @red;
   }
-  .keyword {
-    &.operator {
+
+  .syntax--keyword {
+    &.syntax--operator {
       color: @operator;
-      &.quantifier {
+      &.syntax--quantifier {
         color: @cyan;
       }
-      &.logical {
-        color: @green;
+      &.syntax--logical {
+        color: @logical;
+      }
+      &.syntax--assignment {
+          color: @assignment;
+      }
+      &.syntax--comparison {
+          color: @comparison;
       }
     }
-    &.control.import {
-      color: @orange;
+    &.syntax--control {
+      &.syntax--import {
+          color: @import;
+      }
     }
-    &.other {
+    &.syntax--other {
       color: @green;
     }
   }
-  .constant {
-    &.language {
+
+  .syntax--constant {
+    &.syntax--language {
       color: @constant;
     }
-    &.character {
+    &.syntax--character {
       color: @string;
     }
-    &.other {
-      color: @red;
-    }
+    //&.syntax--other {
+      //color: @red;
+    //}
   }
 
-  .entity.name.type.class {
+  .syntax--entity.syntax--name.syntax--type.syntax--class {
     color: @class;
   }
-  .variable {
+  .syntax--variable {
     color: @variable;
   }
-  .support {
-    &.function.builtin {
-      color: @function;
+  .syntax--support {
+    &.syntax--function.syntax--builtin {
+      color: @builtin;
     }
-    &.type {
-      &.exception.python {
+    &.syntax--type {
+      &.syntax--exception.syntax--python {
         color: @yellow;
       }
-      &.python {
+      &.syntax--python {
         color: @blue;
       }
     }
   }
-  .storage.type.string {
-    color: @string;
-  }
 
-  .storage.type.class {
-    color: @class;
-    &.todo {
-      color: @magenta;
-    }
-  }
-
-  .storage.type.function {
-    color: @green;
-  }
-
-  .punctuation.definition.parameters {
+  .syntax--punctuation.syntax--definition.syntax--parameters {
     color: @parameter;
   }
 
-  .punctuation.section.function.begin {
+  .syntax--punctuation.syntax--section.syntax--function.syntax--begin {
     color: @yellow;
   }
 
-  .punctuation.separator.parameters {
+  .syntax--punctuation.syntax--separator.syntax--parameters {
     color: @yellow;
   }
 

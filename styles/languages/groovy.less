@@ -1,9 +1,15 @@
-.syntax--source.syntax--java {
+.syntax--source.syntax--groovy {
   .syntax--keyword.syntax--operator{
     color:@operator;
   }
   .syntax--keyword.syntax--import{
     color: @keyword;
+  }
+  .syntax--keyword.syntax--control{
+    color: @keyword;
+    &.syntax--exception {
+      color:@keyword;
+    }
   }
   .syntax--storage.syntax--modifier.syntax--import{
     color: @syntax-comment-color;
@@ -29,12 +35,21 @@
     &.syntax--annotation {
       color: @annotation;
     }
+    &.syntax--def {
+      color: @def;
+    }
   }
   .syntax--constant.syntax--numeric{
     color:@magenta;
   }
-  .syntax--constant.syntax--other{
+  .syntax--constant {
     color:@orange;
+    &.syntax--other {
+      color: @sky;
+      &.syntax--key {
+        color: @sky;
+      }
+    }
   }
   //.syntax--storage.syntax--type{
     //color:@type;
@@ -46,11 +61,27 @@
     .syntax--meta.syntax--method{
       color:@method;
     }
-    .syntax--punctuation.syntax--definition.syntax--seperator.syntax--parameter{
-      color:@punctuation;
-    }
+    //.syntax--punctuation.syntax--definition.syntax--seperator.syntax--parameter{
+      //color:@punctuation;
+    //}
   }
-  .syntax--punctuation.syntax--definition.syntax--method-parameters{
-    color: @syntax-emphasized-color;
+  //.syntax--punctuation.syntax--definition.syntax--method-parameters{
+    //color: @parenthesis;
+  //}
+
+  .syntax--punctuation {
+    color:@punctuation;
+    &.syntax--definition {
+      color:@punctuation;
+      &.syntax--seperator {
+        color:@punctuation;
+        &.syntax--parameter {
+          color:@punctuation;
+        }
+      }
+      &.syntax--method-parameters {
+        color:@punctuation;
+      }
+    }
   }
 }
