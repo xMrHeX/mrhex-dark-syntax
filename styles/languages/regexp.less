@@ -1,0 +1,38 @@
+.syntax--source.syntax--regexp {
+  color: @base1;
+  .syntax--meta.syntax--group.syntax--non-capturing.syntax--regex {
+    color: @sky;
+  }
+  .syntax--punctuation {
+    &.syntax--definition.syntax--group.syntax--begin.syntax--regexp {
+      color: @purple;
+    }
+    &.syntax--definition.syntax--group.syntax--end.syntax--regexp {
+      color: @purple;
+    }
+  }
+  .syntax--punctuation.syntax--separator.syntax--colon.syntax--regexp {
+    color: @colon;
+  }
+  .syntax--punctuation.syntax--delimiter.syntax--comma.syntax--regexp {
+    color: @comma;
+  }
+  .syntax--punctuation.syntax--definition.syntax--quantifier.syntax--bracket.syntax--curly.syntax--begin.syntax--regexp {
+    color: @brackets;
+  }
+  .syntax--punctuation.syntax--definition.syntax--quantifier.syntax--bracket.syntax--curly.syntax--end.syntax--regexp {
+    color: @brackets;
+  }
+  .syntax--constant.syntax--character.syntax--escape.syntax--misc.syntax--regexp {
+    color: @red;
+  }
+  .syntax--keyword.syntax--operator.syntax--logical.syntax--or.syntax--regexp {
+    color: @orange;
+  }
+  .syntax--keyword.syntax--operator.syntax--quantifier.syntax--min.syntax--regexp {
+    color: @orange;
+  }
+  .syntax--keyword.syntax--operator.syntax--quantifier.syntax--regexp {
+    color: @operator;
+  }
+}
