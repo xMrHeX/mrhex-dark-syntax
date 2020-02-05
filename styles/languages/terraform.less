@@ -1,0 +1,35 @@
+.syntax--source.syntax--terraform {
+  color: @attribute;
+  .syntax--meta.syntax--section {
+    color: @attribute;
+    .syntax--meta.syntax--section {
+      color: @identifier;
+      .syntax--entity.syntax--name.syntax--section {
+        color: @variable;
+      }
+      .syntax--constant.syntax--language {
+        color: @orange;
+      }
+      .syntax--support.syntax--variable {
+        color: @variable;
+      }
+    }
+    .syntax--entity.syntax--name.syntax--section {
+      color: @attribute;
+    }
+    .syntax--variable.syntax--parameter {
+      color: @property;
+      .syntax--punctuation.syntax--section.syntax--begin,
+      .syntax--punctuation.syntax--section.syntax--end {
+        color: @yellow;
+      }
+    }
+
+    .syntax--string.syntax--interpolated {
+      color: @string;
+      .syntax--entity {
+        color: @string;
+      }
+    }
+  }
+}
