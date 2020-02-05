@@ -1,35 +1,78 @@
 .syntax--source.syntax--terraform {
-  color: @attribute;
-  .syntax--meta.syntax--section {
     color: @attribute;
     .syntax--meta.syntax--section {
-      color: @identifier;
-      .syntax--entity.syntax--name.syntax--section {
-        color: @variable;
-      }
-      .syntax--constant.syntax--language {
-        color: @orange;
-      }
-      .syntax--support.syntax--variable {
-        color: @variable;
-      }
+        color: @attribute;
+        .syntax--constant.syntax--numeric {
+            color: @number;
+        }
+        .syntax--keyword.syntax--control.syntax--heredoc-token {
+            color: @amethyst;
+        }
+        .syntax--meta.syntax--section {
+            color: @identifier;
+            .syntax--entity.syntax--name.syntax--section {
+                color: @parameter;
+            }
+            .syntax--constant.syntax--language {
+                color: @constant;
+            }
+            .syntax--support.syntax--variable {
+                color: @variable;
+            }
+        }
+        .syntax--entity.syntax--name.syntax--section {
+            color: @function;
+        }
+        .syntax--variable.syntax--parameter {
+            color: @parameter;
+            .syntax--punctuation.syntax--section.syntax--begin,
+            .syntax--punctuation.syntax--section.syntax--end {
+                color: @yellow;
+            }
+        }
+        .syntax--language.syntax--list {
+            color: @brackets;
+            .syntax--string.syntax--interpolated {
+                .syntax--entity {
+                    color: @green;
+                    .syntax--string {
+                        color: @string;
+                    }
+                }
+            }
+            .syntax--constant.syntax--language {
+                color: @constant;
+            }
+        }
+        .syntax--string.syntax--interpolated {
+            .syntax--entity {
+                color: @string;
+                .syntax--none {
+                    color: @white;
+                    .syntax--variable.syntax--interpolation.syntax--begin,
+                    .syntax--variable.syntax--interpolation.syntax--end {
+                        color: @yellow;
+                    }
+                    .syntax--support.syntax--variable {
+                        color: @sea_green;
+                    }
+                    .syntax--support.syntax--function {
+                        color: @aqua;
+                    }
+                }
+            }
+            .syntax--string.syntax--unquoted.syntax--yaml {
+                color: @light-cyan;
+            }
+            .syntax--string.syntax--quoted.syntax--double.syntax--yaml {
+                color: @light-red;
+                .syntax--entity.syntax--name.syntax--tag.syntax--yaml {
+                    color: @tag;
+                }
+            }
+            .syntax--punctuation.syntax--separator.syntax--key-value.syntax--yaml {
+                color: @colon;
+            }
+        }
     }
-    .syntax--entity.syntax--name.syntax--section {
-      color: @attribute;
-    }
-    .syntax--variable.syntax--parameter {
-      color: @property;
-      .syntax--punctuation.syntax--section.syntax--begin,
-      .syntax--punctuation.syntax--section.syntax--end {
-        color: @yellow;
-      }
-    }
-
-    .syntax--string.syntax--interpolated {
-      color: @string;
-      .syntax--entity {
-        color: @string;
-      }
-    }
-  }
 }
