@@ -1,42 +1,23 @@
 .syntax--source.syntax--ansible {
-
-  .syntax--text {
-      color: @magenta;
-  }
-  .syntax--keyword.syntax--other {
-      color: @tag;
-  }
-  .syntax--storage {
-    color: @storage;
-    &.syntax--type {
-      color: @function;
+	color: @item;
+  	.syntax--text {
+      	color: @magenta;
+  	}
+  	.syntax--keyword.syntax--other.syntax--ansible {
+      	color: @tag;
+  	}
+  	.syntax--storage.syntax--type.syntax--ansible {
+      	color: @function;
     }
+  	.syntax--string.syntax--quoted.syntax--double.syntax--ansible {
+        color: @string;
+  	}
+	.syntax--comment.syntax--line.syntax--number-sign.syntax--ansible {
+        color: @comment;
+  	}
+	.syntax--punctuation.syntax--definition.syntax--comment.syntax--line.syntax--ansible {
+        color: @green;
+  	}
 
-  }
-
-  .syntax--string {
-    &.syntax--quoted {
-      &.syntax--double {
-          color: @string;
-        }
-    }
-  }
-
-    .syntax--constant.syntax--numeric {
-        color: @magenta;
-    }
-
-    .syntax--entity.syntax--name.syntax--tag {
-        color: @magenta;
-    }
 
 }
-
-
-//.syntax--constant.syntax--numeric.syntax--yaml {
-//    color: @magenta;
-//}
-
-//.syntax--entity.syntax--name.syntax--tag.syntax--yaml {
-//    color: @purple;
-//}

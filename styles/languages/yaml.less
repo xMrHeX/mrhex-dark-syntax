@@ -1,11 +1,25 @@
 .syntax--source.syntax--yaml {
 
-    .syntax--constant.syntax--numeric {
+    .syntax--constant.syntax--numeric.syntax--integer {
         color: @number;
+    }
+	.syntax--constant.syntax--numeric.syntax--float {
+        color: @light-red;
     }
 
     .syntax--string.syntax--unquoted {
         color: @variable;
+    }
+	.syntax--string.syntax--unquoted.syntax--block {
+        color: @cnst;
+    }
+	.syntax--punctuation.syntax--definition.syntax--string.syntax--begin.syntax--yaml,
+	.syntax--punctuation.syntax--definition.syntax--string.syntax--end.syntax--yaml {
+		color: @yellow;
+	}
+	.syntax--string.syntax--quoted.syntax--double,
+	.syntax--hyperlink {
+        color: @string;
     }
 
     .syntax--entity.syntax--name.syntax--tag {
@@ -17,7 +31,16 @@
     }
 
     .syntax--punctuation.syntax--definition.syntax--entry {
-      color: @green
+      color: @default
     }
+	.syntax--comment.syntax--line.syntax--number-sign.syntax--yaml {
+        color: @comment;
+		.syntax--hyperlink {
+	        color: @cyan;
+	    }
+  	}
+	.syntax--punctuation.syntax--definition.syntax--comment.syntax--yaml {
+        color: @green;
+  	}
 
 }

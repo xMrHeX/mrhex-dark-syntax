@@ -1,122 +1,133 @@
 .syntax--source.syntax--python {
-  .syntax--entity {
-    color: @turquois;
-    &.syntax--name {
-      color: @blue;
-    }
-    &.syntax--other {
-      color: @blue;
-    }
-  }
+	.syntax--entity {
+		color: @turquois;
+		&.syntax--name {
+			color: @blue;
+			&.syntax--function {
+				color: @function;
+			}
+		}
+		&.syntax--other {
+			color: @blue;
+		}
+	}
 
-  .syntax--storage {
-    color: @storage;
-    &.syntax--type,
-    &.syntax--function {
-      color: @function;
-      &.syntax--magic {
-        color: @blue;
-      }
-    }
-    &.syntax--string {
-      color: @string;
-    }
-    &.syntax--class {
-      color: @class;
-      &.syntax--todo {
-        color: @magenta;
-      }
-    }
-  }
+	.syntax--storage {
+		color: @storage;
+		&.syntax--type {
+			&.syntax--function {
+				color: @keyword;
+			}
+			&.syntax--magic {
+				color: @blue;
+			}
+		}
+		&.syntax--string {
+			color: @string;
+		}
+		&.syntax--class {
+			color: @class;
+			&.syntax--todo {
+				color: @magenta;
+			}
+		}
+	}
 
-  .syntax--string {
-    &.syntax--quoted {
-      &.syntax--double {
-        &.syntax--block {
-          color: @docstring;
-          &.syntax--sql {
-          color: @docstring;
-          }
-        }
-      }
-    }
-  }
-  .syntax--block {
-    color: @docstring;
-  }
-  .syntax--punctuation.syntax--string {
-    color: @red;
-  }
+	.syntax--string {
+		&.syntax--quoted {
+			&.syntax--double {
+				&.syntax--block {
+					color: @docstring;
+					&.syntax--sql {
+						color: @docstring;
+					}
+				}
+			}
+		}
+	}
+	.syntax--block {
+		color: @docstring;
+	}
+	.syntax--punctuation.syntax--string {
+		color: @red;
+	}
 
-  .syntax--keyword {
-    &.syntax--operator {
-      color: @operator;
-      &.syntax--quantifier {
-        color: @cyan;
-      }
-      &.syntax--logical {
-        color: @logical;
-      }
-      &.syntax--assignment {
-          color: @assignment;
-      }
-      &.syntax--comparison {
-          color: @comparison;
-      }
-    }
-    &.syntax--control {
-      &.syntax--import {
-          color: @import;
-      }
-    }
-    &.syntax--other {
-      color: @green;
-    }
-  }
+	.syntax--keyword {
+		&.syntax--operator {
+			color: @operator;
+			&.syntax--quantifier {
+				color: @cyan;
+			}
+			&.syntax--logical {
+				color: @light-red;
+			}
+			&.syntax--assignment {
+				color: @assignment;
+			}
+			&.syntax--comparison {
+				color: @comparison;
+			}
+		}
+		&.syntax--control {
+			color: @function-call;
+			&.syntax--import {
+				color: @import;
+			}
+		}
+		&.syntax--other {
+			color: @green;
+		}
+	}
 
-  .syntax--constant {
-    &.syntax--language {
-      color: @constant;
-    }
-    &.syntax--character {
-      color: @string;
-    }
-    //&.syntax--other {
-      //color: @red;
-    //}
-  }
+	.syntax--constant {
+		&.syntax--language {
+			color: @constant;
+		}
+		&.syntax--character {
+			color: @string;
+		}
+		//&.syntax--other {
+		//color: @red;
+		//}
+	}
 
-  .syntax--entity.syntax--name.syntax--type.syntax--class {
-    color: @class;
-  }
-  .syntax--variable {
-    color: @variable;
-  }
-  .syntax--support {
-    &.syntax--function.syntax--builtin {
-      color: @builtin;
-    }
-    &.syntax--type {
-      &.syntax--exception.syntax--python {
-        color: @yellow;
-      }
-      &.syntax--python {
-        color: @blue;
-      }
-    }
-  }
+	.syntax--entity.syntax--name.syntax--type.syntax--class {
+		color: @class;
+	}
 
-  .syntax--punctuation.syntax--definition.syntax--parameters {
-    color: @parameter;
-  }
+	.syntax--variable {
+		color: @variable;
+		&.syntax--parameter {
+			color: @parameter;
+			&.syntax--function {
+				color: @turquois;
+			}
+		}
+		&.syntax--other {
+			color: @keyword-other;
+			&.syntax--object {
+				color: @amethyst;
+				&.syntax--property {
+					color: @orange;
+				}
+			}
+		}
 
-  .syntax--punctuation.syntax--section.syntax--function.syntax--begin {
-    color: @yellow;
-  }
-
-  .syntax--punctuation.syntax--separator.syntax--parameters {
-    color: @yellow;
-  }
-
-
+	}
+	.syntax--support {
+		&.syntax--function {
+			color: @lavender;
+		}
+		&.syntax--builtin {
+			color: @builtin;
+		}
+		&.syntax--type {
+			&.syntax--exception {
+				color: @yellow;
+			}
+			&.syntax--python {
+				color: @blue;
+			}
+		}
+	}
 }
